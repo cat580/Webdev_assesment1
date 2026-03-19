@@ -1,0 +1,44 @@
+/* Main body styling */
+body {
+   background-color: #d9dbe0;
+   color: rgb(12, 11, 11);
+   font-family: 'Oswald', sans-serif;
+  
+}
+
+
+/* Header section styling */
+header {
+   font-size: 30px;
+   padding: 15px;
+   color: #080807;
+   background-color: rgb(160, 153, 153);
+   display:block;
+}
+
+/* Egg substitute tip box styling */
+.p1 {
+   font-size: 20px;
+   padding: 10px;
+   color: #080807;
+   background-color: rgb(160, 153, 153);
+   margin: 15px 0;
+   display: block;
+}
+/* Footer styling */
+footer{
+   font-size: 18px;
+   padding: 10px;
+   color: #080807;
+   background-color: rgb(160, 153, 153);
+   margin: 15px 0;
+  
+}
+/* Text content sizing */
+p,ol,ul{
+   font-size:20px;
+}
+/* Heading sizes */
+h1,h2,h3{
+   font-size: 30px;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Prints – The Wondering Photographer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Skip link: allows keyboard users to jump straight to the main content,
+     bypassing the header. It is hidden off-screen until focused. -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- Site header: contains the site name and a link to the checkout basket -->
+<header>
+    <p class="site-name">The Wondering Photographer</p>
+
+    <!-- aria-label gives screen readers a meaningful name for this link
+         since the emoji alone would not be descriptive enough -->
+    <a href="#" class="basket-link" aria-label="Go to checkout basket">🛒 View basket</a>
+</header>
+
+<!-- Main content: id="main-content" is the target of the skip link above -->
+<main id="main-content">
+
+    <!-- Decorative divider image: role="presentation" and aria-hidden="true"
+         hide it from screen readers as it carries no meaningful information -->
+    <div class="decor" role="presentation" aria-hidden="true"></div>
+
+    <!-- Page heading: gives screen reader users a clear title for the page -->
+    <h1>Buy Prints</h1>
+
+    <!-- Each photo is wrapped in an <article> so screen readers can
+         navigate between individual prints as self-contained items -->
+
+    <!-- Photo 1: Greenland coast -->
+    <article class="photo-card">
+        <!-- alt text describes the image content for screen reader users -->
+        <img src="pictures/OceanPhoto.jpg"
+             alt="People on white chalk cliffs overlooking a turquoise ocean in Greenland">
+        <p class="caption">This was from a fabulous trip to the coast of Greenland with my family. The water was lovely — but very cold!</p>
+        <!-- type="button" prevents accidental form submission.
+             aria-label makes the button purpose unique for screen readers,
+             since all buttons share the same visible text "Add to basket" -->
+        <button type="button" class="basket-btn" aria-label="Add Greenland coast photo to basket">Add to basket</button>
+    </article>
+
+    <!-- Photo 2: Golden Gate Bridge -->
+    <article class="photo-card">
+        <img src="pictures/BridgePhoto.jpg"
+             alt="Looking up at the red steel towers of the Golden Gate Bridge in San Francisco">
+        <!-- Caption corrected: original page incorrectly said "New York! New York!" -->
+        <p class="caption">A picture of the Golden Gate Bridge in San Francisco.</p>
+        <button type="button" class="basket-btn" aria-label="Add Golden Gate Bridge photo to basket">Add to basket</button>
+    </article>
+
+    <!-- Photo 3: Greenland valley -->
+    <article class="photo-card">
+        <img src="pictures/ValleyPhoto.jpg"
+             alt="Wide glacial river valley in Greenland with a blue fjord and rocky mountains">
+        <p class="caption">Another great photo from Greenland. It's a river valley where a glacier used to be.</p>
+        <button type="button" class="basket-btn" aria-label="Add Greenland valley photo to basket">Add to basket</button>
+    </article>
+
+    <!-- Photo 4: Waterfall -->
+    <article class="photo-card">
+        <img src="pictures/WaterfallPhoto.jpg"
+             alt="A waterfall cascading down mossy green rocks into a misty pool">
+        <p class="caption">The waterfall made such a lovely sound. I could have fallen asleep!</p>
+        <button type="button" class="basket-btn" aria-label="Add waterfall photo to basket">Add to basket</button>
+    </article>
+
+</main>
+
+<!-- Footer: contains copyright info and site navigation links -->
+<footer>
+    <p>&copy; The Wondering Photographer 2018</p>
+    <!-- aria-label distinguishes this nav from any other navigation on the page -->
+    <nav aria-label="Footer navigation">
+        <a href="#">Home</a>
+        <a href="#">Blog</a>
+        <a href="#">About me</a>
+    </nav>
+</footer>
+
+</body>
+</html>

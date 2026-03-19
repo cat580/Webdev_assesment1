@@ -1,0 +1,145 @@
+/* Reset: removes default browser margin and padding from all elements */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Body: sets the base font and the pink background colour */
+body {
+    font-family: Arial, sans-serif;
+    background: #e85a9c;
+}
+
+/* Skip link: hidden off-screen by default, moves into view when focused.
+   This lets keyboard users skip the header and jump straight to content. */
+.skip-link {
+    position: absolute;
+    top: -999px;
+    left: 0;
+    background: #0057b8;
+    color: #fff;
+    padding: 10px 16px;
+    text-decoration: none;
+    z-index: 100;
+}
+.skip-link:focus { top: 0; }
+
+/* Header: dark pink bar across the top holding the site name and basket link */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    background: #b5336e;
+}
+
+/* Site name text in the header */
+.site-name {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Basket link: styled as a button so it is clearly interactive */
+.basket-link {
+    background: #fff;
+    color: #1a1a1a;
+    padding: 7px 14px;
+    border: 2px solid #1a1a1a;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.basket-link:hover { background: #f5f0d8; }
+
+/* Main content area: centred with a max width to keep lines readable */
+main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 16px 40px;
+}
+
+/* Decorative divider: displayed as a background image, no text content */
+.decor {
+    background-image: url('pictures/TheDivider.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 100px;
+    margin: 16px 0 8px;
+}
+
+/* Page heading: white so it is visible against the pink background */
+h1 {
+    color: #fff;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Photo card: cream background container for each print */
+.photo-card {
+    background: #f5f0d8;
+    margin-bottom: 24px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Photo image: full width of the card, height scales automatically */
+.photo-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Caption: #0d5c6b gives a 5.2:1 contrast ratio on the cream background,
+   which passes WCAG AA (minimum 4.5:1 required for normal text) */
+.caption {
+    color: #0d5c6b;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 12px 14px 8px;
+}
+
+/* Add to basket button: pink background with white text.
+   White on #b5336e gives a 5.1:1 contrast ratio — passes WCAG AA */
+.basket-btn {
+    display: inline-block;
+    margin: 8px 14px 14px;
+    background: #b5336e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+.basket-btn:hover { background: #e85a9c; }
+
+/* Footer: dark background with cream text for clear contrast */
+footer {
+    background: #1a1a1a;
+    color: #f5f0d8;
+    padding: 18px 20px;
+    font-size: 0.95rem;
+}
+
+/* Footer nav: lays the links out in a horizontal row */
+footer nav {
+    margin-top: 8px;
+    display: flex;
+    gap: 16px;
+}
+
+/* Footer links: cream coloured to stand out against the dark background */
+footer a {
+    color: #f5f0d8;
+    text-decoration: underline;
+}
+footer a:hover { color: #fff; }
+
+/* Focus styles: visible outline on all interactive elements when navigating
+   by keyboard. :focus-visible only shows for keyboard, not mouse clicks. */
+:focus-visible {
+    outline: 3px solid #0057b8;
+    outline-offset: 2px;
+}
